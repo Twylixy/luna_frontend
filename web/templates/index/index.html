@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">{% include 'normalize.css' %}</style>
+  <style type="text/css">{% include "index/index.css" %}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+  <div class="app">
+    <div class="app__navigation">
+      <nav class="navigation">
+        <a href="/"><img class="navigation__logo" src="{% static 'index/index_logo.png' %}"/></a>
+        
+        <ul class="navigation__items">
+          <li class="navigation__item">
+            <a href="#moderation" class="navigation__button">Moderation</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#sayer" class="navigation__button">Sayer</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#stats" class="navigation__button">Server Stats</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#level" class="navigation__button">Leveling</a>
+          </li>
+        </ul>
+
+        <img class="navigation__login" src="{% static 'login.svg' %}"/>
+      </nav>
+    </div>
+
+    <div class="app__page">
+      <div class="page">
+        <div class="intro">
+          <div class="intro__text">
+            <p class="intro__headline">The True Magic Of Night</p>
+            <ul class="features">
+              <li class="features__item">
+                <img class="features__icon" src="{% static 'bolt.svg' %}"/>
+                <span class="features__text">Moderation</span>
+              </li>
+              <li class="features__item">
+                <img class="features__icon" src="{% static 'bolt.svg' %}"/>
+                <span class="features__text">Sayer</span>
+              </li>
+              <li class="features__item">
+                <img class="features__icon" src="{% static 'bolt.svg' %}"/>
+                <span class="features__text">Statistics</span>
+              </li>
+              <li class="features__item">
+                <img class="features__icon" src="{% static 'bolt.svg' %}"/>
+                <span class="features__text">Leveling</span>
+              </li>
+            </ul>   
+          </div>
+          <img class="intro__logo" src="{% static 'index/intro_logo.png' %}"/>
+          <img class="intro__wave" src="{% static 'index/wave.svg' %}"/>
+        </div>
+
+        <div id="moderation" class="module">
+          <div class="module__text">
+            <p class="module__headline">Prevents bad communication</p>
+            <p class="module__description">Let Luna to have a deal with trolls, spammers and just people who try to seed rough communication on your server. The powerful filters and intelligent auto-moderation will provide the clear community for your server and your users.</p>
+          </div>
+          <img class="module__icon" src="{% static 'index/judge.svg' %}"/>                  
+        </div>
+
+        <div id="sayer" class="module">
+          <div class="module__text">
+            <p class="module__headline">Luna can remeber</p>
+            <p class="module__description">Meet the "Sayer" module! By this module Luna can remember messages that your users have send in the text channels. Then you can to get them back by mention Luna or configure Luna to say them by random triggering. Of course you can customize filters for messages to remember. </p>
+          </div>
+          <img class="module__icon" src="{% static 'index/remember.svg' %}"/>                  
+        </div>
+
+        <div id="stats" class="module">
+          <div class="module__text">
+            <p class="module__headline">Collects your server stats</p>
+            <p class="module__description">Have you ever seen how much users have joined to your server past week? Haven't? That's because you didn't use the Luna's servers stats. Fully-detailed information and statistics about your server and users activity.</p>
+          </div>
+          <img class="module__icon" src="{% static 'index/report.svg' %}"/>                  
+        </div>
+
+        <div id="level" class="module">
+          <div class="module__text">
+            <p class="module__headline">Levels are not a problem</p>
+            <p class="module__description">She provides the next level of user's leveling system. Did you use thing like XP for each message on your server? Forget about it. Carefully calculated activity from everything that you can do on server. Only most active users can be in the top of the server's rating.</p>
+          </div>
+          <img class="module__icon" src="{% static 'index/stats.svg' %}"/>                  
+        </div>
+
+        <div class="outro">
+          <div class="outro__text">
+            <p class="outro__headline">What are you waiting for?</p>
+            <p class="outro__hint">Add me to your server and I'll show you the true magic.</p>
+          </div>
+          <input class="outro__button" type="button" value="Add to server"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="app__footer">
+      <footer class="footer">
+        <div class="vendor-info">
+          <span class="vendor-info__title">Powered by Staypony Space</span>
+          <p class="vendor-info__additional">maintained by Twylix#7068</p> 
+          <a class="vendor-info__additional" href="https://everhoof.ru/">Radio Everhoof</a>
+        </div>
+        <p class="footer__copyright">&copy; Copyright The Staypony 2022. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

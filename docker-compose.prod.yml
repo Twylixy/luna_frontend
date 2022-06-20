@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile.prod
+    container_name: frontend
+    volumes:
+      - frontend_data:/var/www/luna.staypony.space/static/
+    env_file:
+      - ./.env.prod
+    networks:
+      - luna_network
+
+  nginx_frontend:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile.prod
+    container_name: nginx_frontend
+    volumes:
+      - frontend_data:/var/www/luna.staypony.space/static
+    depends_on:
+      - frontend
+    networks:
+      - luna_network
+    ports:
+      - 8080:80
+      - 8443:443
+
+volumes:
+  frontend_data:
+
+
+networks:
+  luna_network:
+    driver: bridge
+    name: luna_network
