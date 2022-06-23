@@ -1,5 +1,7 @@
 .venv
 .env.dev
-.env.prod
+.env.production
 __pycache__
 .pyc
+
+ssl/*

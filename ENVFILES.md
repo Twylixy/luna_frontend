@@ -14,7 +14,6 @@ DJANGO_ALLOWED_HOSTS - Allowed hosts for django (array[string])
 ### Database
 Variables for Django database connection
 ```
-DJANGO_DATABASE_ENGINE - Database engine (string)
 DJANGO_DATABASE_NAME - Database name (string)
 DJANGO_DATABASE_USER - Database user (string)
 DJANGO_DATABASE_PASSWORD - Database password (string)
