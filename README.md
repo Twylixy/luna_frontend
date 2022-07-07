@@ -24,11 +24,11 @@ Detailed information about **.env** configurations is [here](https://github.com/
 **Note:** argument *-p* isn't required
 ### Develope
 ```bash
-$ docker-compose -f docker-compose.dev.yml -p "luna_frontend" up --build -d
+$ docker-compose -f docker-compose.dev.yml -p "luna" up --build -d
 ```
 ### Production
 ```bash
-$ docker-compose -f docker-compose.prod.yml -p "luna_frontend" up --build -d
+$ docker-compose -f docker-compose.prod.yml -p "luna" up --build -d
 ```
 
 ## Develop on Windows

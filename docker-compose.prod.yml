@@ -2,24 +2,32 @@ version: "3.9"
 
 services:
   frontend:
-    build:
-      context: .
-      dockerfile: ./docker/web/Dockerfile.prod
+    # Build from Dockerfile
+    # Note: comment `image`
+    #
+    # build:
+    #   context: .
+    #   dockerfile: ./docker/web/Dockerfile.prod
+    image: twylix/luna_frontend
     container_name: frontend
     volumes:
-      - frontend_data:/var/www/luna.staypony.space/static/
+      - static_data:/var/www/luna.staypony.space/static/
     env_file:
       - ./.env.production
     networks:
       - luna_network
 
   nginx_frontend:
-    build:
-      context: .
-      dockerfile: ./docker/nginx/Dockerfile.prod
+    # Build from Dockerfile
+    # Note: comment `image`
+    #
+    # build:
+    #   context: .
+    #   dockerfile: ./docker/nginx/Dockerfile.prod
+    image: twylix/luna_frontend_nginx
     container_name: nginx_frontend
     volumes:
-      - frontend_data:/var/www/luna.staypony.space/static
+      - static_data:/var/www/luna.staypony.space/static
     depends_on:
       - frontend
     networks:
@@ -29,7 +37,7 @@ services:
       - 8443:443
 
 volumes:
-  frontend_data:
+  static_data:
 
 
 networks:
